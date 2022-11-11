@@ -23,9 +23,10 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatTableModule} from "@angular/material/table";
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
-import {PersonServiceComponent} from "./components/person/person.service/person.service.component";
+import {PersonService} from "./components/person/person.service/person.service";
 import {MatSnackBar} from "@angular/material/snack-bar";
-
+import { PersonListComponent } from './components/person/person-list/person-list.component';
+import { DialogAnimationsExampleComponent } from './components/views/dialog-animations-example/dialog-animations-example.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,8 @@ import {MatSnackBar} from "@angular/material/snack-bar";
     HomeComponent,
     PersonCrudComponent,
     PersonCreateComponent,
+    PersonListComponent,
+    DialogAnimationsExampleComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,7 @@ import {MatSnackBar} from "@angular/material/snack-bar";
     MatTableModule,
     MatSelectModule,
   ],
-  providers: [PersonServiceComponent, MatSnackBar],
+  providers: [PersonService, MatSnackBar],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
