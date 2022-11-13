@@ -1,0 +1,42 @@
+<mat-card>
+    <mat-card-title class="title">
+      Nova Pessoa
+    </mat-card-title>
+    <form #nome>
+      <mat-form-field color="black">
+        <input matInput  [(ngModel)]="person.login" placeholder="Login"
+               name="login">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Nome" [(ngModel)]="person.name"
+              name="name" >
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput  [(ngModel)]="person.lastname" placeholder="Sobrenome"
+             name="lastname">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput  type="password" [(ngModel)]="person.password" placeholder="Senha"
+            name="password">
+    </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Selecione o Acesso</mat-label>
+        <mat-select [(ngModel)]="person.access"
+                    required
+                    name="access">
+          <mat-option [value]="undefined">Selecione</mat-option>
+          <mat-option [value]="'DENTIST'">Dentista</mat-option>
+          <mat-option [value]="'EMPLOYEE'">Funcionário</mat-option>
+        </mat-select>
+      </mat-form-field>
+  </form>
+  <button mat-raised-button color="primary" class="buttonSave" (click)="create()">
+    Salvar
+  </button>
+
+  <button mat-raised-button (click) ="cancel()">
+    Cancelar
+  </button>
+</mat-card>
+

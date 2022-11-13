@@ -26,7 +26,8 @@ import {MatSelectModule} from "@angular/material/select";
 import {PersonService} from "./components/person/person.service/person.service";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import { PersonListComponent } from './components/person/person-list/person-list.component';
-import { DialogAnimationsExampleComponent } from './components/views/dialog-animations-example/dialog-animations-example.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ListDialogComponent } from './components/views/list-dialog/list-dialog.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { DialogAnimationsExampleComponent } from './components/views/dialog-anim
     PersonCrudComponent,
     PersonCreateComponent,
     PersonListComponent,
-    DialogAnimationsExampleComponent,
+    ListDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,6 +58,7 @@ import { DialogAnimationsExampleComponent } from './components/views/dialog-anim
     MatInputModule,
     MatTableModule,
     MatSelectModule,
+    MatDialogModule
   ],
   providers: [PersonService, MatSnackBar],
   bootstrap: [AppComponent]

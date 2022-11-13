@@ -1,0 +1,23 @@
+.sidenav{
+  width: 200px;
+  background-color: darkslategrey;
+}
+
+.material-icons{
+  padding-right: 10px;
+  padding-left: 10px;
+  color: white;
+}
+
+.content{
+  padding: 16px;
+  background-color: white;
+}
+
+i{
+  color: white;
+}
+
+.nameIcon {
+  color: white;
+}
