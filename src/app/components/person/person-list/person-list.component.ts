@@ -35,9 +35,7 @@ export class PersonListComponent implements OnInit {
    // this.openDialog("0","0", "Deseja desativar o usuário?");
     this.personService.disable(id).subscribe(()=>{
       this.personService.showMessage('Pessoa desabilitada com sucesso! ')
-      this.router.navigate(['']);
-      this.router.navigate(['/persons']);
-      this.load()
+      this.ngOnInit()
     })
   }
 
@@ -45,7 +43,7 @@ export class PersonListComponent implements OnInit {
     // this.openDialog("0","0", "Deseja desativar o usuário?");
     this.personService.enable(id).subscribe(()=>{
       this.personService.showMessage('Pessoa habilitada com sucesso! ')
-      this.load()
+      this.ngOnInit();
     })
   }
 
@@ -66,6 +64,11 @@ export class PersonListComponent implements OnInit {
       }
     });
 
+  }
+
+  navigate(): void {
+    this.router.navigate(['/'])
+    this.router.navigate(['/persons'])
   }
 
 }
