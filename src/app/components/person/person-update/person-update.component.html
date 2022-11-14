@@ -4,15 +4,15 @@
   </mat-card-title>
   <form #nome>
     <mat-form-field color="black">
-      <input matInput  [(ngModel)]="person.login" placeholder="Login"
+      <input matInput required  [(ngModel)]="person.login" placeholder="Login"
              name="login">
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Nome" [(ngModel)]="person.name"
+      <input matInput required placeholder="Nome" [(ngModel)]="person.name"
              name="name" >
     </mat-form-field>
     <mat-form-field>
-      <input matInput  [(ngModel)]="person.lastname" placeholder="Sobrenome"
+      <input matInput required [(ngModel)]="person.lastname" placeholder="Sobrenome"
              name="lastname">
     </mat-form-field>
     <mat-form-field>
