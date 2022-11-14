@@ -28,6 +28,7 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 import { PersonListComponent } from './components/person/person-list/person-list.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ListDialogComponent } from './components/views/list-dialog/list-dialog.component';
+import { PersonUpdateComponent } from './components/person/person-update/person-update.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ListDialogComponent } from './components/views/list-dialog/list-dialog.
     PersonCreateComponent,
     PersonListComponent,
     ListDialogComponent,
+    PersonUpdateComponent,
   ],
   imports: [
     BrowserModule,

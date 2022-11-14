@@ -3,6 +3,7 @@ import {Person} from "../person.model";
 import {catchError, EMPTY, map, Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import * as http from "http";
 
 @Injectable({
   providedIn: 'root'
@@ -37,6 +38,22 @@ export class PersonService {
   enable (id : String) :Observable<Person> {
     const url = `${this.baseUrl+"/status/activate"}/${id}`
     return this.http.put<Person>(url,{}).pipe(
+      map((obj)=>obj),
+      catchError(e =>this.errorHandler(e))
+    );
+  }
+
+  findById(id: string):Observable<Person> {
+    const url = `${this.baseUrl}/${id}`
+    return this.http.get<Person>(url).pipe(
+      map((obj) => obj),
+      catchError(e => this.errorHandler(e))
+    );
+  }
+
+  update(person: Person):Observable<Person> {
+    const url = `${this.baseUrl}/${person.id}`
+    return this.http.put<Person>(url,person).pipe(
       map((obj)=>obj),
       catchError(e =>this.errorHandler(e))
     );
