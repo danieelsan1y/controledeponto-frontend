@@ -23,7 +23,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatTableModule} from "@angular/material/table";
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
-import {PersonService} from "./components/person/person.service/person.service";
+import {PersonService} from "./components/person/person-service/person.service";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import { PersonListComponent } from './components/person/person-list/person-list.component';
 import {MatDialogModule} from '@angular/material/dialog';

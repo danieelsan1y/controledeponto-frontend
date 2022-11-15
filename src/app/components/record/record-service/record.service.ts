@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {catchError, EMPTY, map, Observable} from "rxjs";
-import {RecordInsert} from "../record-insert.model";
+import {Record} from "../record-model/record.model";
 import {HttpClient} from "@angular/common/http";
 import {MatSnackBar} from "@angular/material/snack-bar";
 
@@ -12,7 +12,7 @@ export class RecordService {
 
   constructor(private http:HttpClient, private snackBar : MatSnackBar) { }
 
-  create(recordInsert : RecordInsert): Observable<RecordInsert> {
+  create(recordInsert : Record): Observable<Record> {
     return this.http.post(this.baseUrl,recordInsert).pipe(
       map((obj) =>obj),
       catchError(e=> this.errorHandler(e))

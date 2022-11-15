@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {PersonService} from "../person.service/person.service";
-import {Person} from "../person.model";
+import {PersonService} from "../person-service/person.service";
+import {Person} from "../person-model/person.model";
 import {MatDialog} from "@angular/material/dialog";
 import {ListDialogComponent} from "../../views/list-dialog/list-dialog.component";
 import {Router} from "@angular/router";

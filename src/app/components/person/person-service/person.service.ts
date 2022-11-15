@@ -1,5 +1,5 @@
 import {Component, Injectable, OnInit} from '@angular/core';
-import {Person} from "../person.model";
+import {Person} from "../person-model/person.model";
 import {catchError, EMPTY, map, Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {MatSnackBar} from "@angular/material/snack-bar";

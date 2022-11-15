@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {PersonService} from "../person.service/person.service";
+import {PersonService} from "../person-service/person.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {Person} from "../person.model";
+import {Person} from "../person-model/person.model";
 import {Observable} from "rxjs";
 
 @Component({

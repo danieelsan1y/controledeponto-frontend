@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Person} from "../../person/person.model";
-import {RecordInsert} from "../record-insert.model";
+import {Person} from "../../person/person-model/person.model";
+import {Record} from "../record-model/record.model";
 import {RecordService} from "../record-service/record.service";
 import {Router} from "@angular/router";
 
@@ -10,7 +10,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./record-insert.component.css']
 })
 export class RecordInsertComponent implements OnInit {
-  recordInsert: RecordInsert = {
+  recordInsert: Record = {
     login: '',
     password: '',
     numeroRegistro: ''
@@ -23,10 +23,10 @@ export class RecordInsertComponent implements OnInit {
 
 
   create () : void {
-     this.recordService.create(this.recordInsert).subscribe((recordInsert:RecordInsert) => {
+     this.recordService.create(this.recordInsert).subscribe((recordInsert:Record) => {
        this.recordInsert = recordInsert;
-      this.recordService.showMessage("Ponto Registrado com sucesso," +
-        "Numero do Registro : " + this.recordInsert.numeroRegistro,false,10000);
+      this.recordService.showMessage("Sucesso, " +
+        "numero do registro : " + this.recordInsert.numeroRegistro,false,10000);
       this.router.navigate([''])
     });
   }

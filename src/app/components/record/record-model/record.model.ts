@@ -1,4 +1,4 @@
-export interface RecordInsert {
+export interface Record {
 
   login?: String,
   password?: String,
