@@ -29,6 +29,8 @@ import { PersonListComponent } from './components/person/person-list/person-list
 import {MatDialogModule} from '@angular/material/dialog';
 import { ListDialogComponent } from './components/views/list-dialog/list-dialog.component';
 import { PersonUpdateComponent } from './components/person/person-update/person-update.component';
+import { RecordInsertComponent } from './components/record/record-insert/record-insert.component';
+import {RecordService} from "./components/record/record-service/record.service";
 
 @NgModule({
   declarations: [
@@ -42,6 +44,7 @@ import { PersonUpdateComponent } from './components/person/person-update/person-
     PersonListComponent,
     ListDialogComponent,
     PersonUpdateComponent,
+    RecordInsertComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,7 +65,7 @@ import { PersonUpdateComponent } from './components/person/person-update/person-
     MatSelectModule,
     MatDialogModule
   ],
-  providers: [PersonService, MatSnackBar],
+  providers: [PersonService, MatSnackBar, RecordService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

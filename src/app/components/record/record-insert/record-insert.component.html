@@ -1,0 +1,28 @@
+
+<div class="container">
+  <div class="child">
+    <mat-card class="card">
+      <mat-card-title class="title">
+        Registrar Ponto
+      </mat-card-title>
+      <form #nome>
+        <mat-form-field color="black">
+          <input matInput required [(ngModel)]="recordInsert.login" placeholder="Login"
+                 name="login">
+        </mat-form-field>
+        <mat-form-field>
+          <input  matInput required  type="password" [(ngModel)]="recordInsert.password" placeholder="Senha"
+                  name="password">
+        </mat-form-field>
+      </form>
+      <button mat-raised-button color="primary" class="buttonSave" (click)="create()">
+        Registrar
+      </button>
+      <button mat-raised-button (click)="cancel()">
+        Cancelar
+      </button>
+    </mat-card>
+
+  </div>
+
+</div>
