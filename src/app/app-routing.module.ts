@@ -5,7 +5,7 @@ import {PersonCrudComponent} from "./components/views/person-crud/person-crud.co
 import {PersonCreateComponent} from "./components/person/person-create/person-create.component";
 import {PersonUpdateComponent} from "./components/person/person-update/person-update.component";
 import {RecordInsertComponent} from "./components/record/record-insert/record-insert.component";
-import {RecordFaultsComponent} from "./components/record/record-faults/record-faults.component";
+import {RecordFaultsFilterComponent} from "./components/record/record-faults-filter/record-faults-filter.component";
 
 const routes: Routes = [
   {
@@ -30,7 +30,7 @@ const routes: Routes = [
   },
   {
     path:"record/faults",
-    component:RecordFaultsComponent
+    component:RecordFaultsFilterComponent
   }
 ];
 

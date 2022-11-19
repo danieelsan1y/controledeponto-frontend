@@ -31,9 +31,10 @@ import { ListDialogComponent } from './components/views/list-dialog/list-dialog.
 import { PersonUpdateComponent } from './components/person/person-update/person-update.component';
 import { RecordInsertComponent } from './components/record/record-insert/record-insert.component';
 import {RecordService} from "./components/record/record-service/record.service";
-import { RecordFaultsComponent } from './components/record/record-faults/record-faults.component';
+import { RecordFaultsFilterComponent } from './components/record/record-faults-filter/record-faults-filter.component';
 import {CommonModule, registerLocaleData} from "@angular/common";
 import localePT from '@angular/common/locales/pt';
+import { RecordFaultsListComponent } from './components/record/record-faults-list/record-faults-list.component';
 
 registerLocaleData(localePT);
 
@@ -50,7 +51,8 @@ registerLocaleData(localePT);
     ListDialogComponent,
     PersonUpdateComponent,
     RecordInsertComponent,
-    RecordFaultsComponent,
+    RecordFaultsFilterComponent,
+    RecordFaultsListComponent,
   ],
   imports: [
     BrowserModule,

@@ -25,7 +25,6 @@ export class PersonListComponent implements OnInit {
 
   ngOnInit(): void {
     this.personService.list().subscribe((persons: Person[])=> {
-      console.log(persons)
       this.persons = persons;
     })
   }
@@ -48,7 +47,6 @@ export class PersonListComponent implements OnInit {
   }
 
   load() {
-    console.log('sessionStorage', sessionStorage);
     (sessionStorage['refresh'] == 'true' || !sessionStorage['refresh'])
     && location.reload();
     sessionStorage['refresh'] = false;

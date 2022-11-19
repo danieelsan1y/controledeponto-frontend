@@ -25,8 +25,6 @@ export class PersonUpdateComponent implements OnInit {
   }
 
   update(): void {
-    console.log(this.person)
-
     if (this.person.password == null) {
       this.person.password = ''
     }

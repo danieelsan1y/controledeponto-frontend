@@ -1,15 +1,15 @@
 <mat-card>
   <form #nome>
     <mat-form-field color="black" >
-      <input matInput required [(ngModel)]="recordParameter.fristPeriod" placeholder="Date" type="date"
+      <input matInput required [(ngModel)]="recordParameter.fristPeriod" placeholder="date" type="date"
              name="fristPeriod">
     </mat-form-field>
     <mat-form-field>
-      <input matInput required [(ngModel)]="recordParameter.secondPeriod" placeholder="Date" type="date"
+      <input matInput required [(ngModel)]="recordParameter.secondPeriod" placeholder="date" type="date"
              name="fristPeriod" >
     </mat-form-field>
     <mat-form-field>
-      <input matInput required [(ngModel)]="recordParameter.id" placeholder="Id"
+      <input matInput required [(ngModel)]="recordParameter.login" placeholder="login"
              name="id" >
     </mat-form-field>
 
@@ -18,4 +18,6 @@
     </button>
   </form>
 </mat-card>
+
+<app-faults-list [faults]="faults" ></app-faults-list>
 

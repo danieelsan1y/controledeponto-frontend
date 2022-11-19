@@ -1,5 +1,5 @@
 export interface RecordFault {
 
-  fault?: String
+  day?: String
   dayOfWeek?: String
 }
