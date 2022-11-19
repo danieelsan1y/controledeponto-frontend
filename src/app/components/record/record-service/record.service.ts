@@ -48,10 +48,10 @@ export class RecordService {
     let fristPeriod =datePipe.transform(recordParameter.fristPeriod,'dd/MM/YYYY')
     let secondPeriod =datePipe.transform(recordParameter.secondPeriod,'dd/MM/YYYY')
 
-    const url2 = this.baseUrl + '/lacks?fristPeriod=' +fristPeriod
+    const urlWithFilters = this.baseUrl + '/lacks?fristPeriod=' +fristPeriod
       + '&secondPeriod=' + secondPeriod + '&id=1';
 
-    console.log("teset" +url2)
-    return this.http.get<RecordFault[]>(url2);
+    console.log("teset" +urlWithFilters)
+    return this.http.get<RecordFault[]>(urlWithFilters);
   }
 }
