@@ -37,21 +37,17 @@ export class RecordService {
     return EMPTY
   }
 
-  list(recordParameter: RecordParameter) : Observable<RecordFault[]> {
-
-
-
+  list(recordParameter: RecordParameter): Observable<RecordFault[]> {
     const formData = new FormData();
     console.log(recordParameter.fristPeriod)
 
-    let datePipe : DatePipe = new DatePipe('pt-BR')
-    let fristPeriod =datePipe.transform(recordParameter.fristPeriod,'dd/MM/YYYY')
-    let secondPeriod =datePipe.transform(recordParameter.secondPeriod,'dd/MM/YYYY')
+    let datePipe: DatePipe = new DatePipe('pt-BR')
+    let fristPeriod = datePipe.transform(recordParameter.fristPeriod, 'dd/MM/YYYY')
+    let secondPeriod = datePipe.transform(recordParameter.secondPeriod, 'dd/MM/YYYY')
 
-    const urlWithFilters = this.baseUrl + '/lacks?fristPeriod=' +fristPeriod
+    const urlWithFilters = this.baseUrl + '/lacks?fristPeriod=' + fristPeriod
       + '&secondPeriod=' + secondPeriod + '&id=1';
 
-    console.log("teset" +urlWithFilters)
     return this.http.get<RecordFault[]>(urlWithFilters);
   }
 }
