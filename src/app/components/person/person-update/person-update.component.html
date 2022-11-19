@@ -19,7 +19,6 @@
       <input matInput  type="password" [(ngModel)]="person.password" placeholder="Senha"
              name="password">
     </mat-form-field>
-
     <mat-form-field>
       <mat-label>Selecione o Acesso</mat-label>
       <mat-select [(ngModel)]="person.access"
@@ -34,7 +33,6 @@
   <button mat-raised-button color="primary" class="buttonSave" (click)="update()" >
     Atualizar
   </button>
-
   <button mat-raised-button (click) ="cancel()">
     Cancelar
   </button>

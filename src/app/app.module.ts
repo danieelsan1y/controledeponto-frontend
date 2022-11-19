@@ -31,6 +31,11 @@ import { ListDialogComponent } from './components/views/list-dialog/list-dialog.
 import { PersonUpdateComponent } from './components/person/person-update/person-update.component';
 import { RecordInsertComponent } from './components/record/record-insert/record-insert.component';
 import {RecordService} from "./components/record/record-service/record.service";
+import { RecordFaultsComponent } from './components/record/record-faults/record-faults.component';
+import {CommonModule, registerLocaleData} from "@angular/common";
+import localePT from '@angular/common/locales/pt';
+
+registerLocaleData(localePT);
 
 @NgModule({
   declarations: [
@@ -45,6 +50,7 @@ import {RecordService} from "./components/record/record-service/record.service";
     ListDialogComponent,
     PersonUpdateComponent,
     RecordInsertComponent,
+    RecordFaultsComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,7 +69,8 @@ import {RecordService} from "./components/record/record-service/record.service";
     MatInputModule,
     MatTableModule,
     MatSelectModule,
-    MatDialogModule
+    MatDialogModule,
+    CommonModule
   ],
   providers: [PersonService, MatSnackBar, RecordService],
   bootstrap: [AppComponent]
