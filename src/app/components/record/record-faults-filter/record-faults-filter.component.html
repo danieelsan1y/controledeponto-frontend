@@ -1,11 +1,14 @@
-<mat-card>
+<mat-card class="mat">
   <form #nome>
+    <mat-card-title class="title">
+      Listar Faltas
+    </mat-card-title>
     <mat-form-field color="black" >
-      <input matInput required [(ngModel)]="recordParameter.fristPeriod" placeholder="date" type="date"
+      <input matInput required [(ngModel)]="recordParameter.fristPeriod" placeholder="data" type="date"
              name="fristPeriod">
     </mat-form-field>
     <mat-form-field>
-      <input matInput required [(ngModel)]="recordParameter.secondPeriod" placeholder="date" type="date"
+      <input matInput required [(ngModel)]="recordParameter.secondPeriod" placeholder="data" type="date"
              name="fristPeriod" >
     </mat-form-field>
     <mat-form-field>

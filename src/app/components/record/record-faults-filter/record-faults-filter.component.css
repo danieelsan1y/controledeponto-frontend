@@ -42,3 +42,11 @@ mat-card{
 .mat-form-field {
   margin-right: 60px;
 }
+
+.mat {
+  width: 58%;
+  margin-bottom: 10px;
+}
+.card {
+  width: 58%;
+}
