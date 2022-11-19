@@ -1,0 +1,21 @@
+<mat-card>
+  <form #nome>
+    <mat-form-field color="black" >
+      <input matInput required [(ngModel)]="recordParameter.fristPeriod" placeholder="Date" type="date"
+             name="fristPeriod">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput required [(ngModel)]="recordParameter.secondPeriod" placeholder="Date" type="date"
+             name="fristPeriod" >
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput required [(ngModel)]="recordParameter.id" placeholder="Id"
+             name="id" >
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" class="buttonFind" (click)="list()">
+      Buscar
+    </button>
+  </form>
+</mat-card>
+
