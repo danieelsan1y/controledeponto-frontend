@@ -13,7 +13,7 @@ export class RecordInsertComponent implements OnInit {
   recordInsert: Record = {
     login: '',
     password: '',
-    numeroRegistro: ''
+    registerNumber: ''
   }
 
   constructor(private recordService : RecordService, private router: Router) { }
@@ -26,7 +26,7 @@ export class RecordInsertComponent implements OnInit {
      this.recordService.create(this.recordInsert).subscribe((recordInsert:Record) => {
        this.recordInsert = recordInsert;
       this.recordService.showMessage("Sucesso, " +
-        "numero do registro : " + this.recordInsert.numeroRegistro,false,10000);
+        "numero do registro : " + this.recordInsert.registerNumber,false,10000);
       this.router.navigate([''])
     });
   }
