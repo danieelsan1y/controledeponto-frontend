@@ -38,14 +38,13 @@ export class RecordService {
   }
 
   list(recordParameter: RecordParameter): Observable<RecordFault[]> {
-    const formData = new FormData();
-
     let datePipe: DatePipe = new DatePipe('pt-BR')
     let fristPeriod = datePipe.transform(recordParameter.fristPeriod, 'dd/MM/YYYY')
     let secondPeriod = datePipe.transform(recordParameter.secondPeriod, 'dd/MM/YYYY')
 
-    const urlWithFilters = this.baseUrl + '/lacks?fristPeriod=' + fristPeriod
-      + '&secondPeriod=' + secondPeriod + '&login=' + recordParameter.login;
+    const urlWithFilters = this.baseUrl + '/lacks?fristPeriod=' +
+      fristPeriod + '&secondPeriod=' + secondPeriod +
+      '&login=' + recordParameter.login;
 
     return this.http.get<RecordFault[]>(urlWithFilters).pipe(
       map((obj) =>obj),
