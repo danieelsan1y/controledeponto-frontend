@@ -48,12 +48,6 @@
     </ng-container>
 
     <!-- Name Column -->
-    <ng-container matColumnDef="situacao">
-      <th mat-header-cell *matHeaderCellDef>Situação</th>
-      <td mat-cell *matCellDef="let row">{{row.situacao}}</td>
-    </ng-container>
-
-    <!-- Name Column -->
     <ng-container matColumnDef="acao">
       <th mat-header-cell *matHeaderCellDef>Ações</th>
       <td mat-cell *matCellDef="let row">
@@ -62,13 +56,13 @@
             edit
           </i>
         </a>
-        <a routerLink="/persons" (click)="disable(row.id)"class="disable">
+        <a *ngIf="row.status === 'ATIVO'"  routerLink="/persons" (click)="disable(row.id)"class="disable">
           <i class="material-icons">
             remove_circle_outline
           </i>
         </a>
 
-        <a routerLink="/persons"(click)="enable(row.id)" class="enable">
+        <a *ngIf="row.status === 'INATIVO'" routerLink="/persons"(click)="enable(row.id)" class="enable">
           <i class="material-icons">
             done
           </i>
